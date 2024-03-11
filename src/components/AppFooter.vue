@@ -12,7 +12,7 @@ export default {
 
     <div class="container-fluid  p-0">
         <div class="row my-footer justify-content-center m-0 p-0 ">
-            <div class="w-75 d-flex ">
+            <div class="box-col  d-flex ">
                 <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
                     <img class="img-fluid " src="../../public/avadabarbers_footer_shop_image.png" alt="@">
                     <div class="mt-1  my-btn">
@@ -61,6 +61,10 @@ export default {
     height: 500px;
 
     background-color: #121314;
+
+    .box-col{
+        width: 65%;
+    }
 
     img{
         height: 300px;

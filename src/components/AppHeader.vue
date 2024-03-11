@@ -13,7 +13,7 @@ export default {
     <div class="container-fluid p-0">
         <div class="col-12 bg-img d-flex align-items-center flex-column ">
 
-            <div class="row d-flex justify-content-between pt-4 w-75 my-nav m-0 ">
+            <div class="row d-flex justify-content-between pt-4 my-nav m-0 ">
                 <div class="col-3">
                     <img src="../../public/avadabarbers-logo-x1.png" alt="@">
                 </div>
@@ -23,7 +23,7 @@ export default {
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-between w-75 my-hero m-0 ">
+            <div class="row d-flex justify-content-between my-hero m-0 ">
                 <div class="col-6 d-flex flex-column justify-content-center p-0 ">
                     <h1>Barber Shop</h1>
                     <hr>
@@ -32,7 +32,7 @@ export default {
                         <strong>LEARN MORE</strong>
                     </div>
                 </div>
-                <div class="col-6 p-0 ">
+                <div class="col-6 d-flex justify-content-end  p-0 ">
                     <img class="img-fluid " src="../../public/avadabarbers_hero_focalmirror.png" alt="@">
                 </div>
             </div>
@@ -45,15 +45,18 @@ export default {
 <style>
 
 .bg-img{
-    height: 800px;
+    height: 920px;
     background-image: url(../../public/avadabarbers-homepage-hero-bg.jpg);
     background-size: cover;
 
     .my-nav{
-        height: 80px;
+        height: 100px;
+
+        width: 65%;
 
         img{
             height: 50px;
+            object-fit: contain;
         }
 
         i{
@@ -67,6 +70,8 @@ export default {
     }
 
     .my-hero{
+
+        width: 65%;
 
         h1{
             font-family: "Abril Fatface" , serif;
@@ -89,7 +94,7 @@ export default {
         }
         
         img{
-            height: 680px;
+            height: 750px;
         }
 
         .my-btn{
