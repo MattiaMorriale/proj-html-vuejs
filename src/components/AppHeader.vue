@@ -81,7 +81,7 @@ export default {
         }
         
         img{
-            height: 700px;
+            height: 680px;
         }
 
         .my-btn{
