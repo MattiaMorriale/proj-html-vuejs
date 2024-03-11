@@ -10,10 +10,10 @@ export default {
 
 <template>
 
-    <div class="container-fluid p-0  " >
+    <div class="container-fluid p-0">
         <div class="col-12 bg-img d-flex align-items-center flex-column ">
 
-            <div class="row d-flex justify-content-between pt-4 w-75 my-nav">
+            <div class="row d-flex justify-content-between pt-4 w-75 my-nav m-0 ">
                 <div class="col-3">
                     <img src="../../public/avadabarbers-logo-x1.png" alt="@">
                 </div>
@@ -23,13 +23,13 @@ export default {
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-between w-75 my-hero">
+            <div class="row d-flex justify-content-between w-75 my-hero m-0 ">
                 <div class="col-6 d-flex flex-column justify-content-center p-0 ">
                     <h1>Barber Shop</h1>
                     <hr>
                     <p class="my-3 ">The Pinnacle of Male Grooming</p>
-                    <div class="pt-5 ">
-                        <strong class="my-btn">LEARN MORE</strong>
+                    <div class="my-btn">
+                        <strong>LEARN MORE</strong>
                     </div>
                 </div>
                 <div class="col-6 p-0 ">
@@ -81,7 +81,7 @@ export default {
         }
 
         p{
-            opacity: .5;
+            opacity: .3;
 
             font-family: "Encode Sans Expanded", sans-serif;
             letter-spacing: 3px;
@@ -97,7 +97,23 @@ export default {
 
             color: #be9359;
 
+            width: 190px;
+
             padding: 15px 40px; 
+            cursor: pointer;
+
+            transition: ease .4s;
+        }
+
+        .my-btn:hover{
+            background-color: #be9359;
+            
+            strong{
+
+                color:#161718;
+
+            }
+            
         }
         
     }
