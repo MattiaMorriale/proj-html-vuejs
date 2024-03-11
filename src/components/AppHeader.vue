@@ -56,6 +56,14 @@ export default {
             height: 50px;
         }
 
+        i{
+            cursor: pointer;
+        }
+
+        i:hover{
+            color: #be9359;
+        }
+
     }
 
     .my-hero{
