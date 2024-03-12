@@ -46,12 +46,14 @@ export default {
 
 </template>
 
-<style>
+<style lang="scss">
+
+@use '../../src/style/sass' as *;
 
 .my-btn{
-    border: 2px solid #be9359;
+    border: 2px solid $primarycolor;
 
-    color: #be9359;
+    color: $primarycolor;
 
     padding: 15px 40px; 
     cursor: pointer;
@@ -60,7 +62,7 @@ export default {
 }
 
 .my-btn:hover{
-    background-color: #be9359;
+    background-color: $primarycolor;
     
     strong{
 
@@ -71,7 +73,7 @@ export default {
 }
 
 .my-btn-dark{
-    border: 2px solid #be9359;
+    border: 2px solid $primarycolor;
 
     color: #be9359;
 
