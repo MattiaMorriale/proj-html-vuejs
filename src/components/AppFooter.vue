@@ -10,57 +10,72 @@ export default {
 
 <template>
 
-    <div class="container-fluid  p-0">
-        <div class="row my-footer justify-content-center m-0 p-0 ">
-            <div class="box-col  d-flex ">
-                <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
-                    <img class="img-fluid " src="../../public/avadabarbers_footer_shop_image.png" alt="@">
-                    <div class="mt-1  my-btn">
-                        <strong class="text-center ">SHOP OUR RANGE NOW</strong>
-                    </div>
-                </div>
-                <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
-                    <img class="img-fluid my-logo" src="../../public/avadabarbers-logo-x1.png" alt="@">
-                    <p class="text-center m-0 my-5 ">Avada Barbers<br>123 New York Street<br>New York City<br>info@yourwebsite.com<br>+1(555) 555-1212</p>
-                    <strong class="mb-5 mt-2 " >FOLLOW US</strong>
+    <div class="fixed-footer">
 
-                    <ul class="d-flex list-unstyled gap-3 " > 
-                        <li>
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-twitter"></i>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-youtube"></i>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-instagram"></i>
-                        </li>
-                    </ul>
+        <div class="container-fluid p-0">
+            <div class="row my-footer justify-content-center m-0 p-0 ">
+                <div class="box-col  d-flex ">
+                    <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
+                        <img class="img-fluid " src="../../public/avadabarbers_footer_shop_image.png" alt="@">
+                        <div class="mt-1  my-btn">
+                            <strong class="text-center ">SHOP OUR RANGE NOW</strong>
+                        </div>
+                    </div>
+                    <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
+                        <img class="img-fluid my-logo" src="../../public/avadabarbers-logo-x1.png" alt="@">
+                        <p class="text-center m-0 my-5 ">Avada Barbers<br>123 New York Street<br>New York City<br>info@yourwebsite.com<br>+1(555) 555-1212</p>
+                        <strong class="mb-5 mt-2 " >FOLLOW US</strong>
     
-                </div>
-                <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
-                    <img class="img-fluid " src="../../public/avadabarbers_footer_appointment_image.png" alt="@">
-                    <div class="mt-1  my-btn">
-                        <strong class="text-center ">BOOK YOUR APPOINTMENT</strong>
+                        <ul class="d-flex list-unstyled gap-3 " > 
+                            <li>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-youtube"></i>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-instagram"></i>
+                            </li>
+                        </ul>
+        
+                    </div>
+                    <div class="col-4 p-0 d-flex flex-column align-items-center justify-content-center ">
+                        <img class="img-fluid " src="../../public/avadabarbers_footer_appointment_image.png" alt="@">
+                        <div class="mt-1  my-btn">
+                            <strong class="text-center ">BOOK YOUR APPOINTMENT</strong>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row my-copyrigth p-0 m-0 justify-content-center align-items-center ">
+                <p class="m-0 p-0 text-center  ">&copy; Copyright 2012 - 2020 | Avada Theme by Themefusion | All Rights Reserved | Powered by Mattia Morriale</p>
+            </div>
         </div>
-        <div class="row my-copyrigth p-0 m-0 justify-content-center align-items-center ">
-            <p class="m-0 p-0 text-center  ">&copy; Copyright 2012 - 2020 | Avada Theme by Themefusion | All Rights Reserved | Powered by Mattia Morriale</p>
-        </div>
+
     </div>
 
 </template>
 
 <style>
 
+.fixed-footer{
+    position: fixed;
+    z-index: -1;
+
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
 .my-footer{
     height: 500px;
 
     background-color: #121314;
+
 
     .box-col{
         width: 65%;

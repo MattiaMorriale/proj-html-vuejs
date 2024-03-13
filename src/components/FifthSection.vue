@@ -8,7 +8,7 @@ export default {
 
 <template>
 
-<div class="row m-0 p-0 my-blog d-flex flex-column align-items-center ">
+<div class="row p-0 my-blog d-flex flex-column align-items-center ">
     <div class="col-12 d-flex flex-column justify-content-start align-items-center my-title ">
         <strong>TALES FROM THE BARBER SHOP</strong>
         <h2>Recent Blog Posts</h2>
@@ -46,6 +46,8 @@ export default {
 height: 1080px;
 
 background-color: #f5f5f5;
+
+margin: 0 0 580px 0;
 
 .my-title{
     margin-top: 250px;
