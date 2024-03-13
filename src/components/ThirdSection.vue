@@ -1,6 +1,14 @@
 <script>
 export default {
-    name: 'ThirdSection'
+
+    name: 'ThirdSection',
+
+    props: {
+
+        item: Object,
+
+    }
+    
 }
 </script>
 
@@ -12,25 +20,10 @@ export default {
         <h2>Avada Grooming Products</h2>
     </div>
     <div class="my-products-2 d-flex justify-content-center align-items-center px-5 ">
-        <div class="d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/brush_dark.png" alt="@">
-            <h4 class="mt-5">Brush</h4>
-            <p class="text-center">$15.00</p>
-        </div>
-        <div class="d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/scissors.png" alt="@">
-            <h4 class="mt-5">Scissors</h4>
-            <p class="text-center">$85.00</p>
-        </div>
-        <div class="d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/hot_oil_dark.png" alt="@">
-            <h4 class="mt-5">Hot Oil</h4>
-            <p class="text-center">$15.00</p>
-        </div>
-        <div class="d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/straight_razor_dark.png" alt="@">
-            <h4 class="mt-5">Straight Razor</h4>
-            <p class="text-center">$30.00</p>
+        <div class="d-flex flex-column align-items-center justify-content-center" v-for="currentProduct in item">
+            <img class="img-fluid" :src="currentProduct.img" alt="@">
+            <h4 class="mt-5">{{ currentProduct.name }}</h4>
+            <p class="text-center">{{ currentProduct.price }}</p>
         </div>
     </div>
     <div class="col-3 d-flex justify-content-center align-items-center ">

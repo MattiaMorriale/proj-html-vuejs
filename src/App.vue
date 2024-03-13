@@ -15,8 +15,19 @@ export default {
     AppMain,
     AppFooter,
 
+  },
 
-  }
+
+  data() {
+
+    return{
+
+      store,
+
+    }
+  },
+
+
 }
 
 </script>

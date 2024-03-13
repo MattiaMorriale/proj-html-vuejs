@@ -1,7 +1,15 @@
 <script>
 
 export default {
-    name: 'FourthSection'
+
+    name: 'FourthSection',
+
+    props: {
+
+        item: Object,
+        
+    },
+
 }
 
 </script>
@@ -27,20 +35,10 @@ export default {
         <h2>Reviews</h2>
     </div>
     <div class="row my-reviews-2 d-flex justify-content-center align-items-center mt-5 ">
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center p-0">
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam suscipit nostrum amet laborum itaque voluptate excepturi culpa soluta aut.</p>
-            <img class="img-fluid" src="../../public/avadabarbers-trimcut-gallery6.jpg" alt="@">
-            <strong class="my-5">John Doe</strong>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center p-0">
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam suscipit nostrum amet laborum itaque voluptate excepturi culpa soluta aut.</p>
-            <img class="img-fluid" src="../../public/avadabarbers-trimcut-gallery7.jpg" alt="@">
-            <strong class="my-5">Pete Jones</strong>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center p-0">
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam suscipit nostrum amet laborum itaque voluptate excepturi culpa soluta aut.</p>
-            <img class="img-fluid" src="../../public/avadabarbers-trimcut-gallery3.jpg" alt="@">
-            <strong class="my-5">Mark Wilson</strong>
+        <div class="col-4 d-flex flex-column align-items-center justify-content-center p-0" v-for="currentReviews in item">
+            <p class="text-center">{{ currentReviews.description }}</p>
+            <img class="img-fluid" :src="currentReviews.img" alt="@">
+            <strong class="my-5">{{ currentReviews.name }}</strong>
         </div>
     </div>
     <img class="img-fluid position-absolute my-triangle p-0 "  src="../../public/triangle.svg" alt="@">

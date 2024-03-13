@@ -10,6 +10,8 @@ import FourthSection from '../components/FourthSection.vue'
 
 import FifthSection from '../components/FifthSection.vue'
 
+import {store} from '../store.js'
+
 export default {
 
     name: 'AppMain',
@@ -22,7 +24,16 @@ export default {
         FourthSection,
         FifthSection,
 
-    }
+    },
+
+    data() {
+
+        return {
+
+            store,
+
+        }
+    },
 
 }
 
@@ -34,13 +45,13 @@ export default {
 
         <FirstSection></FirstSection>
 
-        <SecondSection></SecondSection>
+        <SecondSection :item="store.services" ></SecondSection>
         
-        <ThirdSection></ThirdSection>
+        <ThirdSection :item="store.products"></ThirdSection>
 
-        <FourthSection></FourthSection>
+        <FourthSection :item="store.reviews"></FourthSection>
 
-        <FifthSection></FifthSection>
+        <FifthSection :item="store.blog"></FifthSection>
 
     </div>
 

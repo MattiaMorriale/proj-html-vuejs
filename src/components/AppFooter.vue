@@ -1,8 +1,18 @@
 <script>
 
+import {store} from '../store.js'
+
 export default {
 
-    name: 'AppFooter'
+    name: 'AppFooter',
+
+    data() {
+        return {
+
+            store,
+
+        }
+    }
 
 }
 
@@ -26,18 +36,9 @@ export default {
                         <p class="text-center m-0 my-5 ">Avada Barbers<br>123 New York Street<br>New York City<br>info@yourwebsite.com<br>+1(555) 555-1212</p>
                         <strong class="mb-5 mt-2 " >FOLLOW US</strong>
     
-                        <ul class="d-flex list-unstyled gap-3 " > 
-                            <li>
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-twitter"></i>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-youtube"></i>
-                            </li>
-                            <li>
-                                <i class="fa-brands fa-instagram"></i>
+                        <ul class="d-flex list-unstyled gap-3" > 
+                            <li v-for="currentSocial in store.socialLinks">
+                                <i :class="currentSocial.icon"></i>
                             </li>
                         </ul>
         

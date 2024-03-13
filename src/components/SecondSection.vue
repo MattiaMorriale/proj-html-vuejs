@@ -1,7 +1,11 @@
 <script>
 
 export default {
-    name: 'SecondSection'
+    name: 'SecondSection',
+
+    props: {
+        item: Object,
+    }
 }
 
 </script>
@@ -14,20 +18,10 @@ export default {
         <h2>Services</h2>
     </div>
     <div class="row my-services-2 d-flex justify-content-center align-items-center mt-5">
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/avadabarbers-trimcut-icon-before.png" alt="@">
-            <h4 class="my-5">Trim & Cut</h4>
-            <p class="text-center">Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and ridiculously good looking.</p>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/avadabarbers-washndry-icon.png" alt="@">
-            <h4 class="my-5">Wash & Dry</h4>
-            <p class="text-center">Take a scat in our fine leather chairs, lean back and let us lather you a fresh head in a luxurious fashion.</p>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/avadabarbers-beardtrim-icon.png" alt="@">
-            <h4 class="my-5">Beard Tidy</h4>
-            <p class="text-center">Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from Avada Barbers.</p>
+        <div class="col-4 d-flex flex-column align-items-center justify-content-center" v-for="currentItem in item">
+            <img class="img-fluid" :src="currentItem.img" alt="@">
+            <h4 class="my-5">{{ currentItem.name }}</h4>
+            <p class="text-center">{{ currentItem.description }}</p>
         </div>
     </div>
     <div class="col-3 d-flex justify-content-center align-items-center ">

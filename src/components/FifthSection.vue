@@ -1,7 +1,13 @@
 <script>
 
 export default {
-    name: 'FifthSection'
+
+    name: 'FifthSection',
+
+    props: {
+        item: Object,
+    },
+
 }
 
 </script>
@@ -14,20 +20,10 @@ export default {
         <h2>Recent Blog Posts</h2>
     </div>
     <div class="row my-blog-2 d-flex justify-content-center align-items-center mt-5">
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/avadabarbers-second-blog-700x441.jpg" alt="@">
-            <h4 class="mt-5 mb-4">Avada Barbers Now Open</h4>
-            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, facilis.</p>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/avadabarbers-choosing-blog-700x441.jpg" alt="@">
-            <h4 class="mt-5 mb-4">Choosing The Right Barber</h4>
-            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, facilis.</p>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center justify-content-center ">
-            <img class="img-fluid" src="../../public/avadabarbers-ourservice-blog-700x441.jpg" alt="@">
-            <h4 class="mt-5 mb-4">Quick Service Guide</h4>
-            <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, facilis.</p>
+        <div class="col-4 d-flex flex-column align-items-center justify-content-center" v-for="currentBlog in item">
+            <img class="img-fluid" :src="currentBlog.img" alt="@">
+            <h4 class="mt-5 mb-4">{{ currentBlog.name }}</h4>
+            <p class="text-center">{{ currentBlog.description }}</p>
         </div>
     </div>
     <div class="col-3 d-flex justify-content-center align-items-center ">
@@ -77,6 +73,7 @@ h4{
     font-family: "Abril Fatface" , serif;
     color: #be9359;
     font-size: 25px;
+    text-align: center;
 
     height: 50px;
 }
