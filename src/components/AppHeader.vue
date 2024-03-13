@@ -79,6 +79,10 @@ export default {
             object-fit: contain;
         }
 
+        .burger-input{
+            color: #be9359;
+        }
+
         i{
             cursor: pointer;
             font-size: 25px;
@@ -87,7 +91,7 @@ export default {
                 color: #be9359;
             }
         }
-        
+
         .my-offcanvas{
             background-size: cover;
             background-repeat: no-repeat;
