@@ -1,8 +1,18 @@
 <script>
 
+import {store} from '../store.js'
+
 export default {
 
-    name: 'AppHeader'
+    name: 'AppHeader',
+
+    data() {
+        return{
+            store,
+
+            hover: '',
+        }
+    },
 
 }
 
@@ -14,12 +24,22 @@ export default {
         <div class="col-12 bg-img d-flex align-items-center flex-column ">
 
             <div class="row d-flex justify-content-between pt-4 my-nav m-0 ">
-                <div class="col-3">
-                    <img src="../../public/avadabarbers-logo-x1.png" alt="@">
+                <div class="col-3 d-flex align-items-center justify-content-start p-0 ">
+                    <img src="../../public/avadabarbers-logo-x2.png" alt="@">
                 </div>
-                <div class="col-1 d-flex align-items-center justify-content-center gap-3 fs-5 ">
+                <div class="col-1 d-flex align-items-center justify-content-center gap-4 fs-5 ">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars burger-input" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                    <div :style="{'background-image': 'url('+ hover +')'}"  class="offcanvas offcanvas-end w-100 my-offcanvas bg-black" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header d-flex justify-content-end ">
+                            <div class="close-hov" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></div>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center ">
+                            <ul class="list-unstyled text-center" >
+                                <li class="py-4 fs-3" v-for="currentLinks in store.burgerLinks" v-on:mouseover="hover = currentLinks.bgImg" v-on:mouseout="hover = 0">{{ currentLinks.type }}</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -55,17 +75,61 @@ export default {
         width: 65%;
 
         img{
-            height: 50px;
+            height: 60px;
             object-fit: contain;
         }
 
         i{
             cursor: pointer;
+            font-size: 25px;
+
+            &:hover{
+                color: #be9359;
+            }
+        }
+        
+        .my-offcanvas{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            .burger-input{
+                color: #be9359;
+            }
+    
+            ul{
+    
+                width: 100%;
+    
+                li:nth-of-type(1) {
+                    color: #be9359;
+
+                }
+    
+                li{
+                    cursor: pointer;
+    
+                    &:hover{
+                        color: #be9359;
+                    }
+                }
+            }
         }
 
-        i:hover{
-            color: #be9359;
+
+
+        .close-hov{
+            transition: linear .1s;
+
+            i{
+                font-size: 30px;
+            }
+            
+            &:hover{
+                color: #be9359;
+            }
         }
+
 
     }
 

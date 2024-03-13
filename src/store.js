@@ -2,6 +2,38 @@ import { reactive } from 'vue';
 
 export const store = reactive ({
 
+burgerLinks: [
+    {
+        type: 'Home',
+        bgImg: '../../public/avadabarbers-homepage-hero-bg.jpg'    
+    },
+    {
+        type: 'About Us',
+        bgImg: '../../public/avadabarbers-about-ptb-retina.jpg'  
+    },
+    {
+        type: 'Services',
+        bgImg: '../../public/avadabarbers-trimcut-hero.jpg'
+    },
+    {
+        type: 'Shop',
+        bgImg: '../../public/avadabarbers-blog-ptb-retina.jpg'
+    },
+    {
+        type: 'Our Team',
+        bgImg: '../../public/avadabarbers-reviewsbackground.jpg'
+    },
+    {
+        type: 'Blog',
+        bgImg: '../../public/avadabarbers-services-ptb-retina.jpg'
+    },
+    {
+        type: 'Contact Us',
+        bgImg: '../../public/avadabarbers-contact-ptb-retina.jpg'
+    },
+
+],
+
 services: [
     {
         img: '../../public/avadabarbers-trimcut-icon-before.png',
@@ -93,6 +125,8 @@ socialLinks: [
         icon:`fa-brands fa-instagram`,
     },
 ]
+
+
     
 
 });
